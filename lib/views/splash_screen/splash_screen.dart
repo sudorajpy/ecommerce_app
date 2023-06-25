@@ -18,10 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Lottie.network("https://assets3.lottiefiles.com/packages/lf20_yebxx6nk.json", height: 200, width: 200),
-          // 20.heightBox,
-          // appLogoWidget(),
-          // 10.heightBox,
+          Lottie.asset('assets/animations/cart_animation.json',width: 300,height: 300),
           appname.text.fontFamily(bold).size(22).white.make(),
           5.heightBox,
           appversion.text.white.make(),

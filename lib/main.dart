@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/consts/consts.dart';
+import 'package:ecommerce_app/views/auth/login_screen.dart';
 import 'package:ecommerce_app/views/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         fontFamily: regular,
         useMaterial3: true,
       ),
-      home:const SplashScreen(),
+      home:const LoginScreen(),
     );
   }
 }
