@@ -4,8 +4,8 @@ import 'package:ecommerce_app/widgets/login_field.dart';
 import 'package:ecommerce_app/widgets/social_button.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,23 +17,15 @@ class LoginScreen extends StatelessWidget {
             children: [
               54.heightBox,
               Image.asset('assets/images/signin_balls.png'),
-              const Text('Sign In',
+              const Text('Sign Up',
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 44,
                       color: Colors.white)),
-              50.heightBox,
-              const SocialButton(
-                  iconPath: 'assets/svgs/g_logo.svg',
-                  label: 'Sign in with Google'),
-              20.heightBox,
-              const SocialButton(
-                  iconPath: 'assets/svgs/f_logo.svg',
-                  label: 'Sign in with Facebook',
-                  horizontalPadding: 50),
-              20.heightBox,
-              const Text('Or',
-                  style: TextStyle(color: Pallete.whiteColor, fontSize: 18)),
+              40.heightBox,
+              const LoginField(
+                hintText: 'Name',
+              ),
               20.heightBox,
               const LoginField(
                 hintText: 'Email',
@@ -48,20 +40,23 @@ class LoginScreen extends StatelessWidget {
               ),
               10.heightBox,
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  TextButton(
-                      onPressed: () {},
-                      child: const Text('Forgot Password?',
-                          style: TextStyle(
-                              color: Pallete.whiteColor, fontSize: 18))),
-                  const Spacer(),
-                  TextButton(
-                      onPressed: () {},
-                      child: const Text('Don\'t have an account?',
-                          style: TextStyle(
-                              color: Pallete.whiteColor, fontSize: 18))),
+                  const SocialIconButton(
+                    iconPath: 'assets/svgs/g_logo.svg',
+                  ),
+                  50.widthBox,
+                  const SocialIconButton(
+                    iconPath: 'assets/svgs/f_logo.svg',
+                  ),
                 ],
               ),
+              10.heightBox,
+              TextButton(
+                  onPressed: () {},
+                  child: const Text('Already have an account?',
+                      style:
+                          TextStyle(color: Pallete.whiteColor, fontSize: 18))),
             ],
           ),
         ),

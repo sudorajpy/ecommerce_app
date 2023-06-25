@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 101, 51, 47),
+      backgroundColor: Pallete.backgroundColor,
       body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
           // const Spacer(),
           const Align(
             alignment: Alignment.bottomCenter,
-            child: Text(credits, style: TextStyle(color: Colors.white, fontSize: 14,fontFamily: semibold))),
+            child: Text(credits, style: TextStyle(color: Pallete.whiteColor, fontSize: 14,fontFamily: semibold))),
           20.heightBox,
           
         ],
