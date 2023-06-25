@@ -1,6 +1,6 @@
 import 'package:ecommerce_app/consts/consts.dart';
-import 'package:ecommerce_app/widgets/applogo_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -16,23 +16,21 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: const Color.fromARGB(255, 101, 51, 47),
       body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Align(
-            alignment: Alignment.topLeft,
-            child: Image.asset(
-              icSplashBg,
-              width: 300,
-            ),
-          ),
-          20.heightBox,
-          appLogoWidget(),
-          10.heightBox,
+          Lottie.network("https://assets3.lottiefiles.com/packages/lf20_yebxx6nk.json", height: 200, width: 200),
+          // 20.heightBox,
+          // appLogoWidget(),
+          // 10.heightBox,
           appname.text.fontFamily(bold).size(22).white.make(),
           5.heightBox,
           appversion.text.white.make(),
-          const Spacer(),
-          credits.text.white.fontFamily(semibold).make(),
+          // const Spacer(),
+          const Align(
+            alignment: Alignment.bottomCenter,
+            child: Text(credits, style: TextStyle(color: Colors.white, fontSize: 14,fontFamily: semibold))),
           20.heightBox,
+          
         ],
       )),
     );
