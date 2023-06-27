@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:ecommerce_app/consts/consts.dart';
-import 'package:ecommerce_app/views/home_screen.dart';
+import 'package:ecommerce_app/views/screens/tabs_screens.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (_) => const HomeScreen()));
+          context, MaterialPageRoute(builder: (_) => const TabsScreen()));
     });
   }
 
