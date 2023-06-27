@@ -34,7 +34,7 @@ class GradientButton extends StatelessWidget {
           ),
           // maximumSize: const Size(400, 50)
         ),
-        child: Text(buttonText, style: TextStyle(color: Pallete.whiteColor, fontSize: 18)),
+        child: Text(buttonText, style: const TextStyle(color: Pallete.whiteColor, fontSize: 18)),
         ),
     );
   }

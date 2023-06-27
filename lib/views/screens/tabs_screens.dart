@@ -4,6 +4,8 @@ import 'package:ecommerce_app/views/screens/categories_screen.dart';
 import 'package:ecommerce_app/views/screens/dashboard_screen.dart';
 import 'package:ecommerce_app/views/screens/profile_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
 
 class TabsScreen extends StatefulWidget {
   const TabsScreen({super.key});
@@ -46,6 +48,7 @@ class _TabsScreenState extends State<TabsScreen> {
               if (mounted) {
                 setState(() {
                   currentIndex = index;
+                  HapticFeedback.mediumImpact();
                 });
               }
             },
@@ -149,9 +152,9 @@ List<IconData> listOfIcons = [
 
 List<Widget> _buildScreens() {
   return [
-    DashBoardScreen(),
-    CategoriesScreen(),
-    CartScreen(),
-    ProfileScreen(),
+    const DashBoardScreen(),
+    const CategoriesScreen(),
+    const CartScreen(),
+    const ProfileScreen(),
   ];
 }

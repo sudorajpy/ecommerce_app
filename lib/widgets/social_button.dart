@@ -20,6 +20,7 @@ class SocialButton extends StatelessWidget {
           iconPath,
           height: 30,
           width: 30,
+          // ignore: deprecated_member_use
           color: Pallete.whiteColor,
         ),
         label: Text(
@@ -50,6 +51,7 @@ class SocialIconButton extends StatelessWidget {
           iconPath,
           height: 25,
           width: 25,
+          // ignore: deprecated_member_use
           color: Pallete.whiteColor,
         ),
         style: ElevatedButton.styleFrom(
